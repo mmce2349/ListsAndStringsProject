@@ -27,7 +27,7 @@ public class ListController
 	{
 		for (int index = 0; index < donutList.size(); index+=1 )
 		{
-	//		display.displayText(donutList.get(index));
+			display.displayText(donutList.get(index).toString());
 		}
 	}
 	private void fillTheList()
