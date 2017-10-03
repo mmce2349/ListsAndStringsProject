@@ -23,6 +23,13 @@ public class ListController
 		fillTheList();
 	}
 	
+	private void showTheList()
+	{
+		for (int index = 0; index < donutList.size(); index+=1 )
+		{
+	//		display.displayText(donutList.get(index));
+		}
+	}
 	private void fillTheList()
 	{
 		Donut jellyFilled = new Donut("jelly filled");
