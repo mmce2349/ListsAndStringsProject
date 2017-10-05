@@ -21,22 +21,34 @@ public class ListController
 		System.out.println(donutList);
 		donutList.add(new Donut());
 		fillTheList();
+		showTheList();
 	}
 	
 	private void showTheList()
 	{
+		String favorite = "cream filled ";
 		for (int index = 0; index < donutList.size(); index+=1 )
 		{
+			String currentFlavor = donutList.get(index).getFlavor();
+			
+			if(currentFlavor.equals(favorite))
+			{
+				for(int woop = 0; woop < 5; woop += 1)
+				{
+					display.displayText("The best flavor ever!!!!");
+				}
+			}
+			
 			display.displayText(donutList.get(index).toString());
 		}
 	}
 	private void fillTheList()
 	{
-		Donut jellyFilled = new Donut("jelly filled");
-		Donut creamFilled = new Donut("cream filled");
-		Donut chocolate = new Donut("Chocolate");
-		Donut mapleBacon = new Donut("mapleBacon");
-		Donut glazed = new Donut("Glazed");
+		Donut jellyFilled = new Donut("jelly filled ");
+		Donut creamFilled = new Donut("cream filled ");
+		Donut chocolate = new Donut("Chocolate ");
+		Donut mapleBacon = new Donut("mapleBacon ");
+		Donut glazed = new Donut("Glazed ");
 		
 		donutList.add(jellyFilled);
 		donutList.add(creamFilled);
