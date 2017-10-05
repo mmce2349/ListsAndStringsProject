@@ -28,4 +28,19 @@ public class Donut
 		
 		return description;
 	}
+	
+	public String getShape()//always have a return time for get
+	{
+		return shape; 
+	}
+	
+	public void setShape(String shape)// always have a this.something = something
+	{
+		this.shape = shape;
+	}
+	
+	public String getFlavor()
+	{
+		return flavor;
+	}
 }
