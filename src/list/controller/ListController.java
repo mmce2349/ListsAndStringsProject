@@ -113,6 +113,15 @@ public class ListController
 		{
 			display.displayText(donutList.get(index).getFlavor());
 		}
+		
+		for(int index = 0; index < 12; index += 2)
+		{
+			display.displayText("This donut is " + donutList.get(index).getFlavor());
+		}
+		donutList.add(new Donut("cream Filled"));
+		display.displayText("We now have: " + donutList.size() + ". This is a baker's dozen.");
+		display.displayText("The last donut is: " + donutList.get(12).getFlavor());
+		
 	}
 	
 	public ArrayList<Donut> getDonutList()
