@@ -24,6 +24,7 @@ public class ListController
 //		showTheList();
 		changeTheList();
 		practiceWithList();
+		backwardsLoopDemo();
 	}
 	
 	private void showTheList()
@@ -81,6 +82,7 @@ public class ListController
 		
 			
 	}
+	
 	private void practiceWithList()
 	{
 		
@@ -112,4 +114,15 @@ public class ListController
 			display.displayText(donutList.get(index).getFlavor());
 		}
 	}
+	
+	public ArrayList<Donut> getDonutList()
+	{
+		return (ArrayList<Donut>) donutList;
+	}
+	
+	public PopupDisplay getDisplay()
+	{
+		return display;
+	}
+	
 }
