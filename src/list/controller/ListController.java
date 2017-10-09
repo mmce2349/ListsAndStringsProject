@@ -83,6 +83,7 @@ public class ListController
 	}
 	private void practiceWithList()
 	{
+		
 		donutList.add(new Donut("chocolate filled"));
 		Donut removed = donutList.remove(2);
 		donutList.add(4, removed);
@@ -94,6 +95,14 @@ public class ListController
 		display.displayText("The donut with flavor " + remove.getFlavor() + " has been replaced.");
 		display.displayText("The list is this big: " + donutList.size());
 		
+		for(int loop =0; loop < 12; loop += 1)
+		{
+			loop = donutList.size();
+			display.displayText("I am adding more donuts. " + ( donutList.size()) + " out of a dozen");
+			donutList.add(new Donut("Glazed"));			
+		}
+		display.displayText("This many donuts: " + donutList.size());
+
 	}
 	
 }
