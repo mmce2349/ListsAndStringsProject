@@ -59,5 +59,13 @@ public class ListController
 		donutList.add(mapleBacon);
 		donutList.add(glazed);
 	}
+	private void changeTheList()
+	{
+		display.displayText(" The list is this big: " +donutList.size());
+		Donut removed = donutList.remove(0);
+		display.displayText(removed.getFlavor() + "was removed from the list.");
+		display.displayText("Now it is this big: " + donutList.size());
+		
+	}
 	
 }
