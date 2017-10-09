@@ -21,7 +21,8 @@ public class ListController
 		System.out.println(donutList);
 		donutList.add(new Donut());
 		fillTheList();
-		showTheList();
+//		showTheList();
+		changeTheList();
 	}
 	
 	private void showTheList()
@@ -45,6 +46,8 @@ public class ListController
 			display.displayText(donutList.get(index).toString());
 		}
 	}
+	
+
 	private void fillTheList()
 	{
 		Donut jellyFilled = new Donut("jelly filled ");
@@ -59,12 +62,18 @@ public class ListController
 		donutList.add(mapleBacon);
 		donutList.add(glazed);
 	}
-	private void changeTheList()
+	
+	
+	private void changeTheList() 
 	{
 		display.displayText(" The list is this big: " +donutList.size());
 		Donut removed = donutList.remove(0);
 		display.displayText(removed.getFlavor() + "was removed from the list.");
 		display.displayText("Now it is this big: " + donutList.size());
+		donutList.add(removed);
+		
+		display.displayText("The list is still contains: " + donutList.size() + " items.");
+		
 		
 	}
 	
