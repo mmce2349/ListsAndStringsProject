@@ -10,7 +10,7 @@ public class ListController
 {
 	private List<Donut> donutList;
 	private PopupDisplay display;
-
+	
 	public ListController()
 	{
 		donutList = new ArrayList<Donut>();// this is how you intialize a donut list.
@@ -27,6 +27,15 @@ public class ListController
 		changeTheList();
 		practiceWithList();
 		backwardsLoopDemo();
+		ArrayList<String> tempList = new ArrayList<String>();
+		tempList.add("this is a word sequence");
+		tempList.add("DonutTests.zip");
+		tempList.add("My name is Inigo Montoya...");
+		tempList.add("djkflsdsl; dslkjldksgjlksd sdlkjggdl");
+		tempList.add("Hi");
+		display.displayText("the longest string in the tempList is: " + maxLength(tempList));
+		display.displayText("It is: " + getLongestString(tempList));
+		
 	}
 	
 	private void showTheList()
