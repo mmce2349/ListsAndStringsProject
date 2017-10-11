@@ -10,11 +10,12 @@ public class ListController
 {
 	private List<Donut> donutList;
 	private PopupDisplay display;
-	
+
 	public ListController()
 	{
 		donutList = new ArrayList<Donut>();// this is how you intialize a donut list.
 		display = new PopupDisplay();
+		
 	}
 	
 	public void start()
@@ -32,7 +33,7 @@ public class ListController
 	{
 		String favorite = "cream filled ";
 		for (int index = 0; index < donutList.size(); index+=1 )
-		{
+		{													   	
 			String currentFlavor = donutList.get(index).getFlavor();
 			
 			if(currentFlavor.equals(favorite))
@@ -78,10 +79,40 @@ public class ListController
 		display.displayText("The list still contains: " + donutList.size() + " items.");
 		removed = donutList.set(3, new Donut());
 		display.displayText("The donut with flavor " + removed.getFlavor() + " has been removed.");
-		
-
-		
 			
+	}
+	
+	
+	public int maxLength(ArrayList<String>myList)
+	{
+		int max = 0;
+		
+		for(int index = 0; index < myList.size(); index +=1)
+		{
+			if (max < myList.get(index).length())
+			{
+				max = myList.get(index).length();
+			}
+		}
+				
+		return max;
+	}
+	
+	public String getLongestString(ArrayList<String>myList) 
+	{
+		String longest = "";
+		int max = 0;
+		
+		for (int index = 0; index < myList.size(); index +=1)
+		{
+			if (myList.get(index).length() > max)
+			{
+				max = myList.get(index).length();
+				longest = myList.get(index);
+			}
+		}
+		
+		return longest;		
 	}
 	
 	private void practiceWithList()
