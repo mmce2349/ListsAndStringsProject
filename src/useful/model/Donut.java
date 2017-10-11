@@ -1,4 +1,4 @@
-package list.model;
+package useful.model;
 
 public class Donut 
 {
@@ -10,8 +10,8 @@ public class Donut
 	
 	public Donut()
 	{
-		this.flavor = "Plain ";
-		this.shape = "Round";
+		this.flavor = "plain";
+		this.shape = "round";
 		this.holecount = 1;
 		this.hasSprinkles = false;
 		this.isGlazed = false;

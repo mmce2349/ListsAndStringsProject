@@ -1,9 +1,10 @@
-package list.controller;
+package useful.controller;
 
 import java.util.List;
 import java.util.ArrayList;
-import list.model.Donut; //Must import because its from a different package
-import list.view.PopupDisplay;
+
+import useful.model.Donut;
+import useful.view.PopupDisplay;
 
 public class ListController 
 {
